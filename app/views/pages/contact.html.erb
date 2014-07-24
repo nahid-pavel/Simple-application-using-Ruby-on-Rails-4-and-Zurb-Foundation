@@ -1,0 +1,17 @@
+<% content_for :title do %> Contact <% end %>
+<h3>Contact</h3>
+
+<div class ="form">
+
+<%simple_form_for @contact do |f| %>
+
+   <%= f.error_notification %>
+   
+   <%=f.text_field  :name, autofocus:true   %>
+   <%=f.email       :email  %>
+   <%= f.text_field   :content,as:text  %>
+   <%= form.button :submit, 'Submit', class: 'submit' %>
+
+<% end %>
+
+</div>
